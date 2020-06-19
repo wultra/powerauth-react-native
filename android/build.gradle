@@ -24,6 +24,8 @@ buildscript {
         }
         dependencies {
             classpath 'com.android.tools.build:gradle:3.4.1'
+            classpath "com.android.tools.build:gradle:${project.ext.androidToolsVersion}"
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${project.ext.kotlinVersion}"
         }
     }
 }
@@ -63,6 +65,7 @@ repositories {
 dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
+    implementation "io.getlime.security.powerauth:powerauth-android-sdk:1.4.1"
 }
 
 def configureReactNativePom(def pom) {
